@@ -1,18 +1,19 @@
 .holder {
   display: flex;            /* Enables flexbox layout */
   flex-wrap: wrap;          /* Allows items to wrap to the next row if needed */
-  justify-content: space-between; /* Adds equal space between items */
-  width: 100%;              /* Makes the holder full width */
-  margin: 0 auto;           /* Centers the container horizontally */
+  justify-content: space-between; /* Adds space between items and aligns first/last items with edges */
+  width: 100%;              /* Full width container */
+  padding: 0 10px;          /* Adds a small padding to prevent edge overflow */
+  box-sizing: border-box;   /* Includes padding in width calculations */
 }
 
 .item {
-  flex: 0 1 auto;           /* Prevents shrinking and sets flexible sizing */
-  padding: 10px 20px;       /* Adds padding for the items */
-  background-color: #4CAF50; /* Green background color for items */
-  color: white;             /* White text color */
-  text-align: center;       /* Centers the text */
-  border: 1px solid #ddd;   /* Light border around items */
-  margin-bottom: 10px;      /* Adds spacing between rows */
-  border-radius: 5px;       /* Rounds the corners slightly */
+  flex: 0 1 calc(30% - 10px); /* Sets each item to take 30% of the row, accounting for gaps */
+  margin-bottom: 10px;       /* Adds spacing between rows */
+  padding: 10px;             /* Adds inner spacing */
+  background-color: #4CAF50; /* Green background */
+  color: white;              /* White text color */
+  text-align: center;        /* Centers the text inside the item */
+  border-radius: 5px;        /* Adds rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
 }
