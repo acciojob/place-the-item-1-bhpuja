@@ -1,2 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
 
-/* Your CSS Code here. */
+.holder {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next row if necessary */
+  justify-content: space-between; /* Ensures equal space between items */
+  width: 90%; /* Adjusts width as required */
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the holder on the page */
+}
+
+.item {
+  flex: 0 1 auto; /* Prevents items from shrinking excessively */
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  border: 1px solid #ddd;
+  margin-bottom: 10px; /* Adds spacing between rows */
+  border-radius: 5px;
+}
