@@ -1,21 +1,18 @@
-/* Styling for the holder class */
 .holder {
-  display: flex;              /* Enables Flexbox */
-  flex-wrap: wrap;            /* Allows items to wrap to the next row if necessary */
-  justify-content: space-between; /* Adds space between items and aligns first/last items to edges */
-  gap: 10px;                  /* Adds space between rows */
-  padding: 10px;              /* Optional padding around the holder */
-  box-sizing: border-box;     /* Ensures padding is included in width/height calculations */
-  width: 100%;                /* Ensures it takes the full width of the screen */
+  display: flex;            /* Enables flexbox layout */
+  flex-wrap: wrap;          /* Allows items to wrap to the next row if needed */
+  justify-content: space-between; /* Adds equal space between items */
+  width: 100%;              /* Makes the holder full width */
+  margin: 0 auto;           /* Centers the container horizontally */
 }
 
-/* Styling for the item class */
 .item {
-  flex: 0 1 calc(20% - 10px); /* Ensures items take up 20% width minus the gap to account for spacing */
-  background-color: lightblue; /* For visibility */
-  text-align: center;          /* Center text inside the item */
-  padding: 20px;               /* Adds padding inside each item */
-  box-sizing: border-box;      /* Includes padding in size calculations */
-  border: 1px solid #ddd;      /* Optional border for visual separation */
-  border-radius: 5px;          /* Optional rounded corners */
+  flex: 0 1 auto;           /* Prevents shrinking and sets flexible sizing */
+  padding: 10px 20px;       /* Adds padding for the items */
+  background-color: #4CAF50; /* Green background color for items */
+  color: white;             /* White text color */
+  text-align: center;       /* Centers the text */
+  border: 1px solid #ddd;   /* Light border around items */
+  margin-bottom: 10px;      /* Adds spacing between rows */
+  border-radius: 5px;       /* Rounds the corners slightly */
 }
