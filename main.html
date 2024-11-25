@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        /* CSS for the holder (flex container) */
+        .holder {
+            display: flex;            /* Enables Flexbox layout */
+            justify-content: space-between;  /* Distribute items with space between, first and last touching the edges */
+            flex-wrap: wrap;          /* Allow items to wrap to the next row if they can't fit */
+            width: 100%;              /* Full width of the screen */
+            padding: 0 10px;          /* Optional: Adds a little padding to ensure the first and last items don't touch the edge directly */
+        }
 
+        /* CSS for items */
+        .item {
+            width: 100px;             /* Set a fixed width for each item */
+            height: 100px;            /* Set a fixed height for each item */
+            background-color: #ff6347; /* Example background color (tomato) */
+            margin: 5px;              /* Space between items */
+        }
+    </style>
+</head>
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+    <!-- Flex container holding items -->
+    <div class="holder">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <!-- You can add more items here and they will wrap automatically if there's no space in one row -->
+    </div>
 
 </body>
-
 </html>
